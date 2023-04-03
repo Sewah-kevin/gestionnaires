@@ -34,7 +34,7 @@
             <div class="row">
                 <div class="form-group col-lg-12">
                     <label>Nom Utilisateur ou Email</label>
-                    <input type="text" name="email" class="form-control" placeholder="" required
+                    <input type="text" name="nom" class="form-control" placeholder="" required
                            data-error="Veuillez entrer l'Username ou l'Email SVP !">
                     <div class="help-block with-errors"></div>
                 </div>

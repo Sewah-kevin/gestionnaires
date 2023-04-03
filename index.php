@@ -1,9 +1,9 @@
 <?php
 include_once "db.php";
 session_start();
-if (isset($_SESSION['user_id'])){
-    $user_id = $_SESSION['user_id'];
-    $userQuery = "SELECT * FROM administrateur WHERE idAdmin = '$user_id'";
+if (isset($_SESSION['id'])){
+    $user_id = $_SESSION['id'];
+    $userQuery = "SELECT * FROM gestionnaire WHERE idGest = '$user_id'";
     $result = mysqli_query($connection, $userQuery);
     $user = mysqli_fetch_assoc($result);
 }else{

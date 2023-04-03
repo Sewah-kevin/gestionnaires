@@ -3,14 +3,14 @@ include_once 'db.php';
 session_start();
 
 if (isset($_POST['login'])) {
-    $email = $_POST['email'];
+    $nomUser = $_POST['nom'];
     $password = $_POST['password'];
 
-    if (!$email && !$password) {
+    if (!$nom && !$password) {
         header('Location:login.php?empty');
     } else {
         // $password = md5($password);
-        $query = "SELECT * FROM gestionnaire WHERE nomGest = '$email' AND mdpGest='$password'";
+        $query = "SELECT * FROM gestionnaire WHERE nomGest = '$nomUser' AND mdpGest='$password'";
         $result = mysqli_query($connection, $query);
         if (mysqli_num_rows($result) == 1) {
             $user = mysqli_fetch_assoc($result);
@@ -143,7 +143,7 @@ if (isset($_POST['booking'])) {
     $total_price = $_POST['total_price'];
     $name = $_POST['name'];
     $contact_no = $_POST['contact_no'];
-    $email = $_POST['email'];
+    $email = $_POST['nom'];
     $id_card_id = $_POST['id_card_id'];
     $id_card_no = $_POST['id_card_no'];
     $address = $_POST['address'];
