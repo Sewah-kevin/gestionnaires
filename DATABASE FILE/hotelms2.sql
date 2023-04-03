@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 23 mars 2023 à 01:08
+-- Généré le : lun. 03 avr. 2023 à 16:56
 -- Version du serveur : 10.4.21-MariaDB
 -- Version de PHP : 8.0.12
 
@@ -40,7 +40,8 @@ CREATE TABLE `administrateur` (
 --
 
 INSERT INTO `administrateur` (`idAdmin`, `nomAdmin`, `usernameAdmin`, `emailAdmin`, `mdpAdmin`) VALUES
-(1, 'test', 'test', 'test@gmail.com', 'test');
+(1, 'test', 'test', 'test@gmail.com', 'test'),
+(2, 'admin', 'admin', 'admin@gmail.com', 'admin');
 
 -- --------------------------------------------------------
 
@@ -76,7 +77,8 @@ INSERT INTO `booking` (`booking_id`, `customer_id`, `room_id`, `booking_date`, `
 (9, 9, 27, '2023-03-07 21:50:40', '14-03-2023', '16-03-2023', 3000, 0, 0),
 (10, 10, 10, '2023-03-08 18:25:38', '15-03-2023', '24-03-2023', 15000, 5000, 0),
 (11, 11, 3, '2023-03-10 22:54:14', '15-03-2023', '24-03-2023', 20000, 20000, 0),
-(12, 12, 15, '2023-03-10 22:56:09', '14-03-2023', '22-03-2023', 49500, 49500, 0);
+(12, 12, 15, '2023-03-10 22:56:09', '14-03-2023', '22-03-2023', 49500, 49500, 0),
+(13, 13, 14, '2023-03-24 21:40:33', '25-03-2023', '28-03-2023', 22000, 22000, 0);
 
 -- --------------------------------------------------------
 
@@ -100,12 +102,12 @@ CREATE TABLE `complaint` (
 --
 
 INSERT INTO `complaint` (`id`, `complainant_name`, `complaint_type`, `complaint`, `created_at`, `resolve_status`, `resolve_date`, `budget`) VALUES
-(1, 'Jacques ADAMAH\r\n', 'Room Windows', 'Ne marche pas tres bien', '2020-07-16 06:51:24', 1, '2023-03-11 15:03:35', 3600),
-(2, 'Robert Peter\n', 'Air Conditioner', 'Sensor Problems', '2020-10-01 06:51:44', 1, '2020-10-03 07:06:02', 7950),
-(3, 'Jason J Pirkle\n', 'Bad Smells', 'Some odd smells around room areas', '2018-04-01 07:01:17', 1, '2018-04-01 07:01:52', 500),
-(5, 'Will Williams', 'Faulty Electronics', 'Due to some weird reasons, the electronics are not working as it should; some voltage problems too - M-135', '2021-04-09 08:38:19', 1, '2021-04-09 08:38:39', 2500),
 (6, 'test', 'test', 'clkdxjhfxsreuj', '2023-03-10 15:06:57', 1, '2023-03-10 15:16:08', 12),
-(7, 'ama', 'ama', 'dewefdsfsfwe', '2023-03-22 15:59:41', 0, '2023-03-22 15:59:41', NULL);
+(7, 'ama', 'ama', 'dewefdsfsfwe', '2023-03-22 15:59:41', 0, '2023-03-22 15:59:41', NULL),
+(8, 'test', 'test', 'test', '2023-03-24 22:28:31', 0, '2023-03-24 22:28:31', NULL),
+(9, 'fdf', 'fegrreg', 'regte', '2023-03-24 22:30:05', 1, '2023-03-25 01:31:47', 2000),
+(10, 'METO', 'fsdfgrerg', 'retreg', '2023-03-24 22:32:32', 0, '2023-03-24 22:32:32', NULL),
+(11, 'KODJO Koffi', 'Bug régulier', 'gseferg4t5ergsgdetgrgerfgerg', '2023-03-25 00:18:01', 0, '2023-03-25 00:18:01', NULL);
 
 -- --------------------------------------------------------
 
@@ -139,7 +141,8 @@ INSERT INTO `customer` (`customer_id`, `customer_name`, `contact_no`, `email`, `
 (9, 'test test', 10203040506, 'test@gmail.com', 1, '01020200320030', 'Lomé'),
 (10, ' ', 0, '', 0, '', ''),
 (11, 'Test Test', 1020297, 'test@gmail.com', 1, '8765439876587', 'Lomé'),
-(12, 'Test Test', 233213232434, 'test@gmail.com', 1, '31245432564346', 'Lomé');
+(12, 'Test Test', 233213232434, 'test@gmail.com', 1, '31245432564346', 'Lomé'),
+(13, 'Giovanni IDOH', 304050607, 'Giovanni@gmail.com', 4, '544353543656543434', 'Lomé');
 
 -- --------------------------------------------------------
 
@@ -183,7 +186,10 @@ INSERT INTO `emp_history` (`id`, `emp_id`, `shift_id`, `from_date`, `to_date`, `
 (20, 12, 1, '2021-04-08 17:54:22', NULL, '2021-04-08 17:54:22'),
 (21, 13, 2, '2021-04-09 08:35:27', NULL, '2021-04-09 08:35:27'),
 (22, 1, 2, '2023-03-07 22:43:45', '2023-03-10 23:57:15', '2023-03-07 22:43:45'),
-(23, 1, 2, '2023-03-10 22:57:15', NULL, '2023-03-10 22:57:15');
+(23, 1, 2, '2023-03-10 22:57:15', NULL, '2023-03-10 22:57:15'),
+(24, 14, 0, '2023-03-24 19:40:34', NULL, '2023-03-24 19:40:34'),
+(25, 15, 0, '2023-03-24 19:40:35', NULL, '2023-03-24 19:40:35'),
+(26, 16, 0, '2023-03-24 19:42:32', NULL, '2023-03-24 19:42:32');
 
 -- --------------------------------------------------------
 
@@ -195,7 +201,9 @@ CREATE TABLE `gestionnaire` (
   `idGest` int(4) NOT NULL,
   `nomGest` varchar(20) NOT NULL,
   `prenomGest` varchar(30) NOT NULL,
+  `sexeGest` char(15) NOT NULL,
   `adrGest` varchar(255) NOT NULL,
+  `mdpGest` varchar(20) NOT NULL,
   `id_hotel` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -203,10 +211,10 @@ CREATE TABLE `gestionnaire` (
 -- Déchargement des données de la table `gestionnaire`
 --
 
-INSERT INTO `gestionnaire` (`idGest`, `nomGest`, `prenomGest`, `adrGest`, `id_hotel`) VALUES
-(1, 'ADJETI', 'Josué', '32 Rue des Cocotiers', 3),
-(3, 'TEST', 'Aristide', '12 Rue de la Gloire', 5),
-(4, 'TEST2', 'Diane', '76 Rue du Talent', 4);
+INSERT INTO `gestionnaire` (`idGest`, `nomGest`, `prenomGest`, `sexeGest`, `adrGest`, `mdpGest`, `id_hotel`) VALUES
+(1, 'ADJETI', 'Josué', 'M', '32 Rue des Cocotiers', 'admin', 3),
+(12, 'AMAVI', 'Adjo', 'F', 'Agoè', 'admin', 6),
+(13, 'KITSO', 'Floridette', 'F', 'Bè', 'admin', 3);
 
 -- --------------------------------------------------------
 
@@ -230,7 +238,8 @@ INSERT INTO `hotel` (`id_hotel`, `name_hotel`, `adress_hotel`, `telephone_hotel`
 (4, 'PALM BEACH', 'Lomé', '01020304'),
 (5, 'IBIS', 'Accra', '934227228'),
 (6, 'ONOMO', 'Lomé', '01020304'),
-(7, 'Test', 'test', '01020304');
+(7, 'Test', 'test', '01020304'),
+(8, 'KRIMAS', 'Lomé', '04050607');
 
 -- --------------------------------------------------------
 
@@ -285,12 +294,13 @@ INSERT INTO `room` (`room_id`, `room_type_id`, `room_no`, `status`, `check_in_st
 (10, 2, 'C-102', 1, 1, 0, 0),
 (11, 3, 'C-103', NULL, 0, 0, 1),
 (13, 4, 'D-101', NULL, 0, 1, 1),
-(14, 5, 'K-699', NULL, 0, 1, 0),
+(14, 5, 'K-699', 1, 0, 1, 0),
 (15, 5, 'K-799', 1, 0, 0, 0),
 (16, 5, 'K-899', NULL, 0, 0, 1),
 (21, 10, 'M-966', NULL, 0, 0, 0),
 (22, 10, 'M-869', NULL, 0, 1, 0),
-(27, 1, 'test', 1, 1, 0, 0);
+(27, 1, 'test', 1, 1, 0, 0),
+(30, 6, 'Z-200', NULL, 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -374,7 +384,10 @@ INSERT INTO `staff` (`emp_id`, `emp_name`, `staff_type_id`, `shift_id`, `id_card
 (10, 'Brent Tatro', 5, 2, 1, '422510099122', '1616 Coventry Court\n', 3475468569, 24000, '2019-11-13 06:30:45', '2021-04-08 17:37:07'),
 (11, 'Charles Miller', 3, 2, 1, '0', '382 Byers Lane\n', 7869696969, 20000, '2019-11-18 07:04:03', '2021-04-08 17:37:10'),
 (12, 'John Doe', 2, 1, 4, 'AD69 14579500002', '3714  Duffy Street', 1475550036, 13500, '2021-04-08 17:54:22', '2021-04-08 17:54:22'),
-(13, 'Brent Dixon', 9, 2, 1, '457854555012', '1821 Harry Place', 7457778560, 65500, '2021-04-09 08:35:27', '2021-04-09 08:35:27');
+(13, 'Brent Dixon', 9, 2, 1, '457854555012', '1821 Harry Place', 7457778560, 65500, '2021-04-09 08:35:27', '2021-04-09 08:35:27'),
+(14, 'ama fdf', 5, 0, 0, '', '', 0, 0, '2023-03-24 19:40:34', '2023-03-24 19:40:34'),
+(15, 'ama fdf', 5, 0, 0, '', '', 0, 0, '2023-03-24 19:40:35', '2023-03-24 19:40:35'),
+(16, 'test2 test2', 6, 0, 0, '', '', 0, 0, '2023-03-24 19:42:32', '2023-03-24 19:42:32');
 
 -- --------------------------------------------------------
 
@@ -529,43 +542,43 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `administrateur`
 --
 ALTER TABLE `administrateur`
-  MODIFY `idAdmin` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idAdmin` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `booking_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `booking_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT pour la table `complaint`
 --
 ALTER TABLE `complaint`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT pour la table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT pour la table `emp_history`
 --
 ALTER TABLE `emp_history`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT pour la table `gestionnaire`
 --
 ALTER TABLE `gestionnaire`
-  MODIFY `idGest` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idGest` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT pour la table `hotel`
 --
 ALTER TABLE `hotel`
-  MODIFY `id_hotel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_hotel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT pour la table `id_card_type`
@@ -577,7 +590,7 @@ ALTER TABLE `id_card_type`
 -- AUTO_INCREMENT pour la table `room`
 --
 ALTER TABLE `room`
-  MODIFY `room_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `room_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT pour la table `room_type`
@@ -595,7 +608,7 @@ ALTER TABLE `shift`
 -- AUTO_INCREMENT pour la table `staff`
 --
 ALTER TABLE `staff`
-  MODIFY `emp_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `emp_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT pour la table `staff_type`
