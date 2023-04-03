@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 03 avr. 2023 à 16:56
+-- Généré le : lun. 03 avr. 2023 à 17:45
 -- Version du serveur : 10.4.21-MariaDB
 -- Version de PHP : 8.0.12
 
@@ -41,7 +41,8 @@ CREATE TABLE `administrateur` (
 
 INSERT INTO `administrateur` (`idAdmin`, `nomAdmin`, `usernameAdmin`, `emailAdmin`, `mdpAdmin`) VALUES
 (1, 'test', 'test', 'test@gmail.com', 'test'),
-(2, 'admin', 'admin', 'admin@gmail.com', 'admin');
+(2, 'admin', 'admin', 'admin@gmail.com', 'admin'),
+(3, 'test', 'test', 'test@gmail.com', 'test');
 
 -- --------------------------------------------------------
 
@@ -214,7 +215,7 @@ CREATE TABLE `gestionnaire` (
 INSERT INTO `gestionnaire` (`idGest`, `nomGest`, `prenomGest`, `sexeGest`, `adrGest`, `mdpGest`, `id_hotel`) VALUES
 (1, 'ADJETI', 'Josué', 'M', '32 Rue des Cocotiers', 'admin', 3),
 (12, 'AMAVI', 'Adjo', 'F', 'Agoè', 'admin', 6),
-(13, 'KITSO', 'Floridette', 'F', 'Bè', 'admin', 3);
+(13, 'abc', 'Floridette', 'F', 'Bè', 'abcd', 3);
 
 -- --------------------------------------------------------
 
@@ -542,7 +543,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `administrateur`
 --
 ALTER TABLE `administrateur`
-  MODIFY `idAdmin` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idAdmin` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `booking`
@@ -572,7 +573,7 @@ ALTER TABLE `emp_history`
 -- AUTO_INCREMENT pour la table `gestionnaire`
 --
 ALTER TABLE `gestionnaire`
-  MODIFY `idGest` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `idGest` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT pour la table `hotel`
